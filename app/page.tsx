@@ -1,5 +1,10 @@
 import { Header } from "@/components/header";
 import { Configurator } from "@/components/configurator";
+import {
+  Banner160x300,
+  Banner320x50,
+  NativeBanner,
+} from "@/components/ads";
 import { PHONE_COUNT } from "@/lib/phones";
 
 export default function Page() {
@@ -13,18 +18,25 @@ export default function Page() {
       <div className="relative z-10 flex min-h-dvh flex-col">
         <Header />
         <main className="mx-auto w-full max-w-xl flex-1 px-4 pb-16 pt-8 md:pt-12">
+          <div className="mb-6 flex justify-center">
+            <Banner320x50 />
+          </div>
           <div className="rise-once">
             <Configurator />
           </div>
+          <div className="mt-8 flex justify-center">
+            <Banner160x300 />
+          </div>
 
           <footer className="mt-10 border-t border-[var(--line)] pt-6 text-center text-[13px] leading-relaxed text-[var(--mute)]">
-            <p>
-              Kho có {PHONE_COUNT} máy, thiếu máy nào nhắn là thêm.
-            </p>
+            <p>Kho có {PHONE_COUNT} máy, thiếu máy nào nhắn là thêm.</p>
             <p className="mt-1">
               Vô game bắn thử vài trận rồi nhích nhẹ cho hợp tay.
             </p>
           </footer>
+          <div className="mt-8">
+            <NativeBanner />
+          </div>
         </main>
       </div>
     </>

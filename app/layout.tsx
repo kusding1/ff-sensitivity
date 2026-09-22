@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Be_Vietnam_Pro } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -40,6 +41,11 @@ export default function RootLayout({
       <body
         className={`${display.variable} ${body.variable} font-body antialiased`}
       >
+        <Script
+          id="popunder"
+          strategy="afterInteractive"
+          src="https://pl31454686.profitableratecpmnetwork.com/c2/a2/60/c2a2603ea5ed216302268c771b0e2f57.js"
+        />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
