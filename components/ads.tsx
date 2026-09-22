@@ -42,7 +42,7 @@ function AdIframe({
           "," +
           "'width':" +
           width +
-          ",'params':{}};<\/script>' +
+          ",'params':{}};<\/script>" +
           '<script type="text/javascript" src="https://www.highrevenueformat.com/' +
           adKey +
           '/invoke.js"><\/script>'
