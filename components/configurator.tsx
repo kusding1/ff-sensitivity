@@ -7,6 +7,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { useReducedMotion } from "motion/react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { BannerUnderAnalyze } from "@/components/ads";
 import { CopyButton } from "@/components/copy-button";
 import { PhoneSelector } from "@/components/phone-selector";
 import { Reveal } from "@/components/reveal";
@@ -256,6 +257,7 @@ export function Configurator() {
                   ? `Sẵn sàng quét cho ${phone.name}.`
                   : "Gõ tên máy rồi bấm nút là có số."}
               </p>
+              <BannerUnderAnalyze />
             </div>
           </div>
         </div>
