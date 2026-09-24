@@ -2,7 +2,11 @@ import { Header } from "@/components/header";
 import { Configurator } from "@/components/configurator";
 import {
   Banner160x300,
+  Banner160x600,
+  Banner300x250,
   Banner320x50,
+  Banner468x60,
+  Banner728x90,
   NativeBanner,
 } from "@/components/ads";
 import { PHONE_COUNT } from "@/lib/phones";
@@ -25,7 +29,13 @@ export default function Page() {
             <Configurator />
           </div>
           <div className="mt-8 flex justify-center">
+            <Banner300x250 />
+          </div>
+          <div className="mt-8 flex justify-center">
             <Banner160x300 />
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Banner468x60 />
           </div>
 
           <footer className="mt-10 border-t border-[var(--line)] pt-6 text-center text-[13px] leading-relaxed text-[var(--mute)]">
@@ -35,7 +45,13 @@ export default function Page() {
             </p>
           </footer>
           <div className="mt-8">
+            <Banner728x90 />
+          </div>
+          <div className="mt-8">
             <NativeBanner />
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Banner160x600 />
           </div>
         </main>
       </div>

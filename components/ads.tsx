@@ -64,6 +64,54 @@ export function Banner320x50() {
   );
 }
 
+export function Banner468x60() {
+  return (
+    <AdBanner
+      slotId="ad-slot-468x60"
+      adKey="30407e7e9fdd3ffc418de0df251907e3"
+      width={468}
+      height={60}
+    />
+  );
+}
+
+export function Banner300x250() {
+  return (
+    <AdBanner
+      slotId="ad-slot-300x250"
+      adKey="05d3deee1d0f7c60ead54481f5c444aa"
+      width={300}
+      height={250}
+    />
+  );
+}
+
+export function Banner160x600() {
+  return (
+    <AdBanner
+      slotId="ad-slot-160x600"
+      adKey="2bf4ded481eb9faeeb909ba72d6309c2"
+      width={160}
+      height={600}
+    />
+  );
+}
+
+export function Banner728x90() {
+  return (
+    <div className="hidden w-[728px] max-w-none overflow-hidden md:relative md:left-1/2 md:block md:-translate-x-1/2">
+      <div className="mx-auto flex justify-center">
+        <AdBanner
+          slotId="ad-slot-728x90"
+          adKey="2246bc42f1a148ad4c2c4632534547b2"
+          width={728}
+          height={90}
+        />
+      </div>
+    </div>
+  );
+}
+
 export function NativeBanner() {
   return (
     <>
