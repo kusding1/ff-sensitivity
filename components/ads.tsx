@@ -112,6 +112,32 @@ export function Banner728x90() {
   );
 }
 
+export function BannerTop() {
+  return (
+    <div className="flex justify-center pt-3">
+      <AdBanner
+        slotId="ad-slot-top"
+        adKey="c15d6fad75117701998a200c0f50d097"
+        width={320}
+        height={50}
+      />
+    </div>
+  );
+}
+
+export function BannerUnderAnalyze() {
+  return (
+    <div className="mt-6 flex justify-center">
+      <AdBanner
+        slotId="ad-slot-under-analyze"
+        adKey="05d3deee1d0f7c60ead54481f5c444aa"
+        width={300}
+        height={250}
+      />
+    </div>
+  );
+}
+
 export function NativeBanner() {
   return (
     <>

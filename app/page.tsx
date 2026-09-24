@@ -7,6 +7,7 @@ import {
   Banner320x50,
   Banner468x60,
   Banner728x90,
+  BannerTop,
   NativeBanner,
 } from "@/components/ads";
 import { PHONE_COUNT } from "@/lib/phones";
@@ -20,6 +21,7 @@ export default function Page() {
         OB55
       </div>
       <div className="relative z-10 flex min-h-dvh flex-col">
+        <BannerTop />
         <Header />
         <main className="mx-auto w-full max-w-xl flex-1 px-4 pb-16 pt-8 md:pt-12">
           <div className="mb-6 flex justify-center">
