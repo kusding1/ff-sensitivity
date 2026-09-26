@@ -7,7 +7,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { useReducedMotion } from "motion/react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { BannerUnderAnalyze } from "@/components/ads";
+import { AdGate } from "@/components/ad-gate";
 import { CopyButton } from "@/components/copy-button";
 import { PhoneSelector } from "@/components/phone-selector";
 import { Reveal } from "@/components/reveal";
@@ -38,6 +38,7 @@ export function Configurator() {
   const [submitted, setSubmitted] = useState(false);
   const [scanning, setScanning] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [unlocked, setUnlocked] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const reduceMotion = useReducedMotion();
   const scanRef = useRef(0);
@@ -63,6 +64,7 @@ export function Configurator() {
     setSubmitted(false);
     setScanning(false);
     setProgress(0);
+    setUnlocked(false);
     cancelAnimationFrame(scanRef.current);
   };
 
@@ -88,6 +90,11 @@ export function Configurator() {
     setScanning(false);
     setProgress(100);
     setSubmitted(true);
+    setUnlocked(false);
+  };
+
+  const unlock = () => {
+    setUnlocked(true);
     requestAnimationFrame(() => {
       document
         .getElementById("ket-qua")
@@ -135,7 +142,9 @@ export function Configurator() {
     }
   };
 
-  const analyzed = submitted && phone && profile;
+  const ready = Boolean(submitted && phone && profile);
+  const analyzed = ready && unlocked;
+  const gated = ready && !unlocked;
 
   return (
     <div className="space-y-5">
@@ -257,8 +266,9 @@ export function Configurator() {
                   ? `Sẵn sàng quét cho ${phone.name}.`
                   : "Gõ tên máy rồi bấm nút là có số."}
               </p>
-              <BannerUnderAnalyze />
             </div>
+
+            {gated && <AdGate onUnlock={unlock} />}
           </div>
         </div>
       </section>
