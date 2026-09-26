@@ -142,9 +142,8 @@ export function Configurator() {
     }
   };
 
-  const ready = Boolean(submitted && phone && profile);
-  const analyzed = ready && unlocked;
-  const gated = ready && !unlocked;
+  const analyzed = submitted && phone && profile && unlocked;
+  const gated = Boolean(submitted && phone && profile && !unlocked);
 
   return (
     <div className="space-y-5">
