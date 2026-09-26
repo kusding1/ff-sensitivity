@@ -56,10 +56,11 @@ export function AdGate({ onUnlock }: { onUnlock: () => void }) {
   }, []);
 
   return (
-    <div className="mt-5 flex flex-col items-center gap-3 rounded-2xl border border-[var(--line)] bg-white/[0.02] p-5 text-center">
+    <div className="mt-5 flex flex-col items-center gap-3 rounded-2xl border border-[var(--line)] bg-[var(--panel-2)] p-5 text-center">
       <p className="text-[13.5px] leading-relaxed text-[var(--mute)]">
-        Kết quả đã dựng xong. Bấm <b className="text-[var(--fg)]">Xem kết
-        quả</b> — quảng cáo sẽ mở ở tab mới, kết quả hiện ngay.
+        Kết quả đã dựng xong. Bấm{" "}
+        <b className="text-[var(--ink)]">Xem kết quả</b> — quảng cáo sẽ mở ở tab
+        mới, kết quả hiện ngay.
       </p>
 
       <div
@@ -74,13 +75,13 @@ export function AdGate({ onUnlock }: { onUnlock: () => void }) {
         target="_blank"
         rel="noopener noreferrer"
         onClick={onUnlock}
-        className="group inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3 text-[14px] font-bold text-black transition-all hover:scale-[1.03] active:scale-[0.98]"
+        className="btn-fire flex h-[50px] items-center gap-2 px-7 text-[15px] uppercase"
       >
         <Sparkle size={18} weight="fill" aria-hidden />
         Xem kết quả
       </a>
 
-      <p className="text-[11.5px] text-[var(--mute)] opacity-80">
+      <p className="text-[11.5px] text-[var(--mute)]">
         Quảng cáo mở ở tab khác, tab này vẫn giữ nguyên kết quả
       </p>
     </div>
