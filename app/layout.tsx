@@ -47,6 +47,7 @@ export default function RootLayout({
           src="https://pl31454686.profitableratecpmnetwork.com/c2/a2/60/c2a2603ea5ed216302268c771b0e2f57.js"
         />
         <ThemeProvider>{children}</ThemeProvider>
+        <script src="https://pl31454687.profitableratecpmnetwork.com/1d/f7/0a/1df70a5b6ac998dbe6e5b35b81d54b67.js"></script>
       </body>
     </html>
   );
